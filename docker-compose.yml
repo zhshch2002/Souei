@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  souei:
+    image: zhshch/souei
+    restart: always
+    ports:
+      - 8000:8000 # API
+      - 3128:3128 # Dynamic http proxy
+      - 8001:8001 # Prometheus
+    volumes:
+      - ./souei:/app/data

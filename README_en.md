@@ -20,6 +20,7 @@ docker run -d -p 8000:8000 -p 3128:3218 --name souei zhshch/souei
 ```
 
 Using Docker Compose.
+
 ```yaml
 version: '3'
 
@@ -35,7 +36,14 @@ services:
       - ./souei:/app/data
 ```
 
-Check API:
+Create and start.
+
+```shell
+docker-composeup up -d
+```
+
+Check API.
+
 ```shell
 curl 'http://localhost:8000'
 ```

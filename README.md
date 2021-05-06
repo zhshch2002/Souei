@@ -1,4 +1,5 @@
 # Souei
+
 Souei是一个Python异步代理池。
 
 [English README](README_en.md)
@@ -22,6 +23,7 @@ docker run -d -p 8000:8000 -p 3128:3218 --name souei zhshch/souei
 ```
 
 使用Docker Compose：
+
 ```yaml
 version: '3'
 
@@ -37,7 +39,14 @@ services:
       - ./souei:/app/data
 ```
 
+创建并启动：
+
+```shell
+docker-composeup up -d
+```
+
 查看API：
+
 ```shell
 curl 'http://localhost:8000'
 ```
